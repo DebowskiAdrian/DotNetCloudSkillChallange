@@ -1,0 +1,24 @@
+﻿@page "/todo"
+@using BlazorApp
+@model BlazorApp.Pages.Todo
+
+<h3>Todo</h3>
+
+<ul>
+    @foreach (var todo in todos)
+    {
+        <li>@todo.Title</li>
+    }
+</ul>
+
+<input placeholder="Something todo" />
+<button>Add todo</button>
+
+@code{
+    private List<TodoItem> todos = new();
+
+    private void AddTodo()
+    {
+    // Todo: Add the todo
+    }
+}
